@@ -16,11 +16,11 @@
 
     body {
         font-family: 'Lato', sans-serif;
-        padding: 0;
-        margin: 0;
     }
 
-
+    nav {
+        font-family: 'Lobster', cursive;
+    }
 
 
     .container {
@@ -98,21 +98,19 @@
     #menu-modal {
         display: none;
         transition: opacity .5s ease-in-out;
-
+    
     }
 </style>
 
 <body class="bg-[#ffff]">
-    <!-- nav  -->
-    <nav class=" flex justify-center items-center  grid grid-cols-7">
-        <div class="col-span-2">
-            <h1 class="text-xl font-semibold px-20">Perfect Theme</h1>
-        </div>
-        <div class="col-span-5 h-20 flex justify-between items-center container">
-            <div class="flex justify-center items-center list-none navlabel">
-                <li class="p-5 mr-4 ">
-                    <div class="bg-yellow-00 ">
-                        <a href="" class="text-xl text-black ">Home</a>
+    <nav class="w-[100vw] flex justify-center items-center">
+        <h1 class="text-3xl font-semibold">Perfect Theme</h1>
+
+        <div class="w-[80%] h-20 flex justify-center items-center container">
+            <div class="flex justify-between items-center list-none navlabel">
+                <li class="p-5 mr-4 lictn">
+                    <div class="bg-yellow-100 skewtextctn">
+                        <a href="" class="text-xl text-black article">Home</a>
                     </div>
                 </li>
 
@@ -123,40 +121,17 @@
                 </li>
             </div>
 
-            
-            
-
-            <div class=" menu cursor-pointer mr-10">
-                <span class="text-xs flex justify-center items-center flex-col">
-                    <div class="w-10 h-[2px] bg-black"></div>
-                    <span class="p-1 hover:self-end hover:text-yellow-500"> menu</span>
-                    <div class="w-10 h-[2px] bg-black font-semibold"></div>
-                </span>
-            </div>
 
         </div>
 
+        <div class=" menu cursor-pointer">
+            <span class="text-xs flex justify-center items-center flex-col">
+                <div class="w-10 h-[2px] bg-black"></div>
+                <span class="p-1 hover:self-end hover:text-yellow-500"> menu</span>
+                <div class="w-10 h-[2px] bg-black font-semibold"></div>
+            </span>
+        </div>
     </nav>
-
-
-
-    <!-- banner  -->
-    <section>
-        <div class="w-screen h-[100vh] grid grid-cols-7">
-            <div class="col-span-2">
-                <div class="self-start px-20">
-                    <img src="./assets/img/fav/favicon3.png" alt="" class="self-start" width="70px">
-                </div>
-                <h1 class="uppercase font-semibold text-3xl px-20">Perfect Theme</h1>
-
-            </div>
-            <div class="col-span-5 bg--100">
-                deg
-            </div>
-
-        </div>
-    </section>
-
 
 
 
@@ -223,7 +198,7 @@
 
                 <div class=" px-14">
                     <div
-                        class="px-4 py-4 border-2 flex justify-center items-center mt-5 hover:border-emerald-600 hover:text-emerald-500 ease-in duration-300 ">
+                        class="px-4 py-4 border-2 flex justify-center items-center mt-5 hover:border-emerald-600 hover:text-emerald-500 transition">
                         <button class="uppercase text-sm">Log in</button>
                     </div>
 
@@ -241,18 +216,18 @@
         const menu = document.querySelector('.menu');
 
         menu.addEventListener('click', function () {
-            menumodal.style.opacity = "1";
+            menumodal.style.opacity = "1"; 
             setTimeout(() => {
                 menumodal.style.display = "block";
-            }, 200);
+            }, 200); 
         });
 
         const blankspace = document.getElementById('blankspace');
         blankspace.addEventListener('click', () => {
-            menumodal.style.opacity = "0";
+            menumodal.style.opacity = "0"; 
             setTimeout(() => {
                 menumodal.style.display = "none";
-            }, 500);
+            }, 500); 
         });
 
 
